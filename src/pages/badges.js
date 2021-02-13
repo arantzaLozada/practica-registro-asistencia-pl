@@ -48,7 +48,7 @@ class Badges extends React.Component {
         <div className="badges__container">
           <div className="badges__cont">
             <Link to="/badges/new" className="badges__button">
-              New Badges
+              New Yest
             </Link>
           </div>
           <div className="badges__list">
