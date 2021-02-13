@@ -1,0 +1,27 @@
+.home__content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home__h1 {
+  font-size: 4rem;
+  color: #54595f;
+}
+.home__button {
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  background-color: #6b58e1;
+  padding: 15px;
+  text-decoration: none;
+}
+.home__content2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__img {
+  width: 500px;
+  height: 500px;
+}
