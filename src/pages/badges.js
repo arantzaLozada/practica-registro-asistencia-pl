@@ -16,6 +16,12 @@ class Badges extends React.Component {
 
   componentDidMount() {
     this.fechtData();
+    //  PARA RECARGAR LA PAGINA LA LISTA  CADA 5 SEGUNDOS SE LLAMA POLLING SI ES MAS GRANDE SE PODRIA HACER CON WEBSOCKETS
+    this.setInterval = setInterval(this.fechtData, 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.setInterval);
   }
 
   fechtData = async () => {
@@ -30,7 +36,8 @@ class Badges extends React.Component {
   };
 
   render() {
-    if (this.state.loading === true) {
+    // CON ESTE CODIGO HACEMOS QUE NO RECARGUE TAN INTRUSIVO OSEA LE DECIMOS QUE CARGUE UNA VEZ CON EL LOADER PINTADO PERO DESPUES CARGA POR DEBAJO --- SI EL LOADING ES VERDADERO Y LOS DATOS EL STATE ESTA INDEFINIDO ENTONCES MUESTRA EL LOADER SOLO UNA VEZ , PORQUE CUADNO YA PINTO YA LOS DATOS NO ESTAN INDEFINIDOS YA ESTAN CARGADOS
+    if (this.state.loading === true && !this.state.data) {
       return <Loader />;
     }
 
@@ -56,6 +63,8 @@ class Badges extends React.Component {
               <Badgelist Badges={this.state.data} />
             </div>
           </div>
+          {/* SI LOADING CARGA ENTONCES MUESTRA ESTO  */}
+          {this.state.loading && "loading..."}
         </div>
       </React.Fragment>
     );
