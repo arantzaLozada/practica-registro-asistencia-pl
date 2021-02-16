@@ -4,6 +4,8 @@ import PageLoading from "../componets/pageLoading";
 import Logo from "../images/logoYest.png";
 import api from "../api";
 import PageError from "../componets/PageError";
+import Card from "../componets/Card";
+import { Link } from "react-router-dom";
 
 class BadgeDetails extends React.Component {
   state = {
@@ -51,6 +53,33 @@ class BadgeDetails extends React.Component {
             <h1 className="hero__details-nombres-h1">
               {badge.firstName} {badge.lastName}
             </h1>
+          </div>
+        </div>
+        <div className="container__details">
+          <div className="container__details-badge">
+            <Card
+              firstName={badge.firstName}
+              lastName={badge.lastName}
+              email={badge.email}
+              twitter={badge.twitter}
+              jobTitle={badge.jobTitle}
+            />
+          </div>
+          <div className="container__details-bottoms">
+            <h2 className="container__details-h2">Actions</h2>
+            <div>
+              <Link
+                className="container__details-bottoms-edit"
+                to={`/badges/${badge.id}/edit`}
+              >
+                Edit
+              </Link>
+            </div>
+            <div>
+              <button className="container__details-bottoms-delete">
+                Delete
+              </button>
+            </div>
           </div>
         </div>
       </>
