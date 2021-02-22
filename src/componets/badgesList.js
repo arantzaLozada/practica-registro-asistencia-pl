@@ -22,7 +22,7 @@ class Badgelist extends React.Component {
           return (
             <li className="BadgesListItem" key={badge.id}>
               {/* PARA MANDAR A LA PAGINA EDIT CON SU PROPIO ID DE CADA PERSONA */}
-              <Link className="link" to={`/badges/${badge.id}/edit`}>
+              <Link className="link" to={`/badges/${badge.id}`}>
                 <div className="item">
                   <div>
                     <Gravatar

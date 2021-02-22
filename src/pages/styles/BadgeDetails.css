@@ -1,0 +1,44 @@
+.hero__details {
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.hero__details-image-logo {
+  height: 200px;
+  width: 200px;
+}
+
+.hero__details-nombres-h1 {
+  color: white;
+}
+
+.container__details {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container__details-h2 {
+  color: #6b58e1;
+}
+.container__details-bottoms-edit {
+  text-decoration: none;
+  color: white;
+  background-color: #1ca352;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.container__details-bottoms-delete {
+  font-size: 16px;
+  color: white;
+  background-color: #e71811;
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
