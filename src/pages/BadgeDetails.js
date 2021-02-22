@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Card from "../componets/Card";
-import Modal from "../componets/Modal";
+import DeleteBadgeModal from "../componets/DeleteBadgeModal";
 
 import Logo from "../images/logoYest.png";
 import "./styles/BadgeDetails.css";
@@ -44,15 +44,18 @@ function BadgeDetails(props) {
             </Link>
           </div>
           <div>
+            {/* LE PASA LOS PROPS PARA ABRIR EL MODAL */}
             <button
               onClick={props.onOpenModal}
               className="container__details-bottoms-delete"
             >
               Delete
             </button>
-            <Modal isOpen={props.modalIsOpen} onClose={props.onCloseModal}>
-              oyeee
-            </Modal>
+            <DeleteBadgeModal
+              isOpen={props.modalIsOpen}
+              onClose={props.onCloseModal}
+              onDeleteBadge={props.onDeleteBadge}
+            />
           </div>
         </div>
       </div>

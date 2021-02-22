@@ -1,0 +1,32 @@
+.DeleteBadgeModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.danger {
+  font-size: 25px;
+}
+.container__details-bottoms-deletes {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: white;
+  background-color: #e71811;
+
+  padding: 12px;
+  margin: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.container__details-bottoms-cancel {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: white;
+  background-color: #1ca352;
+
+  padding: 12px;
+  margin: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
